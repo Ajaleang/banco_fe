@@ -3,7 +3,7 @@
 
     <div class="header">
 
-      <h1> Banco Mision TIC </h1>
+      <h1> Banco Armando Alean </h1>
       <nav>
         <button v-if="is_auth" v-on:click="loadHome"> Inicio </button>
         <button v-if="is_auth" v-on:click="loadAccount"> Cuenta </button>
@@ -25,7 +25,7 @@
     
 
     <div class="footer">
-      <h2>Misión TIC 2022</h2>
+      <h2>Armando Alean</h2>
     </div>
 
   </div>
