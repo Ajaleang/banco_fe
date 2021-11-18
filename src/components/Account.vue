@@ -29,8 +29,7 @@ await this.verifyToken();
 let token = localStorage.getItem("token_access");
 let userId = jwt_decode(token).user_id.toString();
 
-axios.get(`https://mision-tic-bank-
-be.herokuapp.com/user/${userId}/`, {headers: {'Authorization': `Bearer ${token}`}})
+axios.get(`https://ar-banco-be.herokuapp.com/user/${userId}/`, {headers: {'Authorization': `Bearer ${token}`}})
 
 .then((result) => {
 this.name = result.data.name;
@@ -44,7 +43,7 @@ this.$emit('logOut');
 },
 verifyToken: function () {
 
-return axios.post("https://mision-tic-bank-be.herokuapp.com/refresh/", {refresh: localStorage.getItem("token_refresh")}, {headers: {}}
+return axios.post("https://ar-banco-be.herokuapp.com/refresh/", {refresh: localStorage.getItem("token_refresh")}, {headers: {}}
 
 )
 .then((result) => {
